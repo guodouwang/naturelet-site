@@ -3,103 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌿 NatureLet 自然识别宝 — 官网首页</title>
-<meta name="description" content="NatureLet 自然识别宝：拍一拍，认识身边的植物与动物。提供拍照识别、养护饲养知识、打卡记录。">
-<meta name="theme-color" content="#2e8b57">
-<link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+<title>NatureLet 自然识别宝 - 拍一拍，认识身边自然</title>
+<meta name="description" content="NatureLet 自然识别宝：拍照识别花鸟鱼虫与常见植物动物，提供知识科普、养护提醒、观察打卡和自然记录。">
+<meta name="theme-color" content="#245f42">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== 顶栏导航 ===== -->
 <header class="topbar">
   <div class="wrap nav-inner">
-    <div class="logo">🌿 <span class="brand">自然识别宝</span></div>
-    <nav class="nav">
+    <a class="logo" href="#home" aria-label="自然识别宝首页">
+      <span class="logo-mark">NL</span>
+      <span class="brand">自然识别宝</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
       <a class="nav-link active" href="#home">首页</a>
+      <a class="nav-link" href="#gallery">真实图库</a>
       <a class="nav-link" href="#features">功能亮点</a>
-      <a class="nav-link" href="#knowledge">知识科普</a>
-      <a class="nav-link" href="#about">关于</a>
+      <a class="nav-link" href="#video">场景视频</a>
+      <a class="nav-link" href="#knowledge">今日科普</a>
+      <a class="nav-link" href="#mini">体验</a>
     </nav>
-    <a class="mini-cta" href="#mini">📱 小程序体验</a>
+    <a class="mini-cta" href="#mini">小程序体验</a>
   </div>
 </header>
 
-<!-- ===== Hero 首屏 ===== -->
-<section id="home" class="hero">
-  <div class="wrap">
-    <h1>拍一拍，认识它 🌸🐦</h1>
-    <p class="lead">上传或拍摄植物、动物的照片，AI 帮你识别物种，并给出养护与饲养知识。<br>随时记录你的自然观察，随手打卡。</p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="#mini">📱 去小程序体验</a>
-      <a class="btn-ghost" href="#features">了解更多 ↓</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 功能亮点 ===== -->
-<section id="features" class="section">
-  <div class="wrap">
-    <h2 class="sec-title">核心功能</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="card-icon">📷</div>
-        <h3>拍照识别</h3>
-        <p>支持植物与动物识别，上传清晰照片即可获取物种名与详细知识。</p>
+<main>
+  <section id="home" class="hero">
+    <div class="hero-media" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">AI 自然识别小程序</p>
+        <h1>自然识别宝</h1>
+        <p class="lead">把镜头对准一朵花、一只鸟、一尾鱼或一只昆虫，几秒认识它的名字、特征、习性与养护提醒。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#mini">立即体验</a>
+          <a class="btn-ghost" href="#gallery">看看能识别什么</a>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">📚</div>
-        <h3>养护/饲养知识</h3>
-        <p>光照、浇水、土壤、施肥一应俱全，还有危险与毒性提醒。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🗺️</div>
-        <h3>打卡记录</h3>
-        <p>记录每次观察的位置与物种，形成你的专属自然观察日志。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">⭐</div>
-        <h3>收藏回顾</h3>
-        <p>把心仪的物种收藏起来，随时回看养护重点，越用越懂。</p>
+      <div class="phone-demo" aria-label="识别结果预览">
+        <div class="phone-top"></div>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red_rose_close-up.jpg" alt="红玫瑰实拍">
+        <div class="scan-frame"></div>
+        <div class="result-sheet">
+          <span class="result-label">识别结果</span>
+          <strong>月季 Rosa chinensis</strong>
+          <p>置信度 96% · 花期、光照、浇水建议已生成</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 知识科普（动态展示内置知识库） ===== -->
-<section id="knowledge" class="section alt">
-  <div class="wrap">
-    <h2 class="sec-title">今日科普</h2>
-    <p class="muted-line">每天认识一种植物 / 动物，图文知识随手学。</p>
-    <div id="dailyBox" class="daily-box">
-      <div class="spinner"></div>
+  <section class="trust-strip" aria-label="产品能力概览">
+    <div class="wrap trust-grid">
+      <div><strong>3000+</strong><span>常见物种知识</span></div>
+      <div><strong>4 类</strong><span>花鸟鱼虫重点覆盖</span></div>
+      <div><strong>秒级</strong><span>拍照识别反馈</span></div>
+      <div><strong>随身</strong><span>自然观察打卡</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 小程序引导 ===== -->
-<section id="mini" class="section cta">
-  <div class="wrap cta-inner">
-    <div>
-      <h2>识别的正确姿势，在微信小程序里 🪄</h2>
-      <p>扫码打开「自然识别宝」小程序，就能直接拍照体验完整识别与打卡功能。</p>
+  <section id="gallery" class="section gallery-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Real Nature Gallery</p>
+        <h2 class="sec-title">真实花鸟鱼虫，一眼进入自然现场</h2>
+        <p class="muted-line">用实拍图片呈现核心识别场景，让用户在打开页面的第一刻就知道它能帮自己认识什么。</p>
+      </div>
+      <div class="nature-grid">
+        <article class="species-card large">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Red_rose_close-up.jpg" alt="红玫瑰实拍">
+          <div class="species-info">
+            <span>花卉识别</span>
+            <h3>看花型、叶片、颜色，快速匹配常见植物</h3>
+          </div>
+        </article>
+        <article class="species-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common_Kingfisher_Alcedo_atthis.jpg" alt="普通翠鸟实拍">
+          <div class="species-info">
+            <span>鸟类识别</span>
+            <h3>遇见飞羽，认识栖息地与习性</h3>
+          </div>
+        </article>
+        <article class="species-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Common_clownfish.jpg" alt="小丑鱼实拍">
+          <div class="species-info">
+            <span>鱼类识别</span>
+            <h3>水族饲养与生态知识随手查</h3>
+          </div>
+        </article>
+        <article class="species-card wide">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Monarch_Butterfly_Danaus_plexippus_on_Echinacea_purpurea_2800px.jpg" alt="帝王蝶停在紫锥菊上的实拍">
+          <div class="species-info">
+            <span>昆虫识别</span>
+            <h3>从翅纹、触角到活动季节，补全观察记录</h3>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="qr" title="小程序码占位">📱<span>小程序码<br>（上线后替换）</span></div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== 关于 ===== -->
-<section id="about" class="section">
-  <div class="wrap">
-    <h2 class="sec-title">关于 NaturalLet</h2>
-    <p class="muted-line">「自然识别宝」致力于让每个人都能轻松认识身边的自然。识别与养护知识仅供参考，无法替代专业鉴定；请以专业资料核实危险与毒性提示。</p>
-  </div>
-</section>
+  <section id="features" class="section feature-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Why NatureLet</p>
+        <h2 class="sec-title">不是只告诉你名字，也帮你真正看懂</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">01</span>
+          <h3>拍照识别</h3>
+          <p>上传清晰照片后，展示候选物种、相似度、拉丁名和关键识别点。</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">02</span>
+          <h3>养护与饲养</h3>
+          <p>补充光照、浇水、温度、食性、饲养注意事项，让兴趣自然延伸。</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">03</span>
+          <h3>风险提醒</h3>
+          <p>对有毒、危险、入侵或不建议触碰的物种做醒目提示，降低误判风险。</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">04</span>
+          <h3>打卡记录</h3>
+          <p>记录地点、时间、照片和笔记，积累自己的自然观察地图。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="section video-section">
+    <div class="wrap video-layout">
+      <div class="video-copy">
+        <p class="eyebrow">People In Nature</p>
+        <h2 class="sec-title align-left">真实人物场景，更像一次随身自然导览</h2>
+        <p>从公园散步、亲子郊游到阳台养花，用户打开相机就能把“好奇一下”变成一次完整记录。</p>
+        <ul class="scenario-list">
+          <li><span></span>识别眼前物种</li>
+          <li><span></span>生成知识卡片</li>
+          <li><span></span>收藏并打卡</li>
+        </ul>
+      </div>
+      <div class="video-stage">
+        <video controls muted loop playsinline poster="https://images.pexels.com/videos/9640623/pexels-photo-9640623.jpeg?auto=compress&fit=crop&w=1280&h=720">
+          <source src="https://www.pexels.com/download/video/9640789/" type="video/mp4">
+          您的浏览器暂不支持视频播放。
+        </video>
+        <div class="video-caption">人在自然环境中使用手机，契合拍照识别与观察记录的产品场景。</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="knowledge" class="section knowledge-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Daily Learning</p>
+        <h2 class="sec-title">今日科普</h2>
+        <p class="muted-line">每天认识一种植物或动物，图文知识随手学。</p>
+      </div>
+      <div id="dailyBox" class="daily-box">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mini" class="section cta">
+    <div class="wrap cta-inner">
+      <div class="cta-copy">
+        <p class="eyebrow">Mini Program</p>
+        <h2>打开自然识别宝，把每次遇见都收进观察册</h2>
+        <p>上线后替换为正式小程序码，即可引导用户从宣传页直接进入拍照识别、收藏和打卡流程。</p>
+      </div>
+      <div class="qr" title="小程序码占位">
+        <span class="qr-phone">N</span>
+        <span>小程序码<br>上线后替换</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about-section">
+    <div class="wrap about-layout">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 class="sec-title align-left">让身边自然变得可亲近</h2>
+      </div>
+      <p>「自然识别宝」致力于让每个人都能轻松认识身边的植物与动物。识别与养护知识仅供参考，无法替代专业鉴定；危险、毒性、外来入侵等提示请以专业资料核实。</p>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="wrap">
-    🌿 NatureLet 自然识别宝 · 识别的植物/动物与养护知识仅供参考，无法替代专业鉴定。<br>
-    危险/毒性、外来入侵等提示请以专业资料核实。
+    <div>NatureLet 自然识别宝 · 拍一拍，认识身边自然</div>
+    <div class="source-line">图片来自 Wikimedia Commons，人物视频来自 Pexels，具体素材可在页面源码中替换为自有版权素材。</div>
   </div>
 </footer>
 
