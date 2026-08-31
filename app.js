@@ -18,7 +18,7 @@
     });
   });
   // 简单滚动高亮
-  var sections = ['home', 'features', 'knowledge', 'about'];
+  var sections = ['home', 'gallery', 'features', 'video', 'knowledge', 'mini', 'about'];
   window.addEventListener('scroll', function () {
     var y = window.scrollY + 120;
     for (var i = sections.length - 1; i >= 0; i--) {
