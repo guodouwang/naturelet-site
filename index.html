@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NatureLet 自然识别宝 - 拍一拍，认识身边自然</title>
 <meta name="description" content="NatureLet 自然识别宝：拍照识别花鸟鱼虫与常见植物动物，提供知识科普、养护提醒、观察打卡和自然记录。">
+<meta name="keywords" content="自然识别宝,NatureLet,植物识别,动物识别,花鸟鱼虫识别,微信小程序,自然观察">
+<meta property="og:title" content="NatureLet 自然识别宝">
+<meta property="og:description" content="拍照识别花鸟鱼虫与常见植物动物，记录每一次自然观察。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/hero-person-phone.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#245f42">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
@@ -15,17 +21,19 @@
   <div class="wrap nav-inner">
     <a class="logo" href="#home" aria-label="自然识别宝首页">
       <span class="logo-mark">NL</span>
-      <span class="brand">自然识别宝</span>
+      <span class="brand" data-i18n="brand">自然识别宝</span>
     </a>
     <nav class="nav" aria-label="主导航">
-      <a class="nav-link active" href="#home">首页</a>
-      <a class="nav-link" href="#gallery">真实图库</a>
-      <a class="nav-link" href="#features">功能亮点</a>
-      <a class="nav-link" href="#video">场景视频</a>
-      <a class="nav-link" href="#knowledge">今日科普</a>
-      <a class="nav-link" href="#mini">体验</a>
+      <a class="nav-link active" href="#home" data-i18n="navHome">首页</a>
+      <a class="nav-link" href="#gallery" data-i18n="navGallery">真实图库</a>
+      <a class="nav-link" href="#features" data-i18n="navFeatures">功能亮点</a>
+      <a class="nav-link" href="#scenarios" data-i18n="navScenarios">应用场景</a>
+      <a class="nav-link" href="#video" data-i18n="navVideo">场景视频</a>
+      <a class="nav-link" href="#knowledge" data-i18n="navKnowledge">今日科普</a>
+      <a class="nav-link" href="#mini" data-i18n="navTry">体验</a>
     </nav>
-    <a class="mini-cta" href="#mini">小程序体验</a>
+    <a class="mini-cta" href="#mini" data-i18n="navCta">小程序体验</a>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
   </div>
 </header>
 
@@ -34,12 +42,13 @@
     <div class="hero-media" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">AI 自然识别小程序</p>
-        <h1>自然识别宝</h1>
-        <p class="lead">把镜头对准一朵花、一只鸟、一尾鱼或一只昆虫，几秒认识它的名字、特征、习性与养护提醒。</p>
+        <p class="eyebrow" data-i18n="heroEyebrow">AI 自然识别小程序</p>
+        <h1 data-i18n="heroTitle">自然识别宝</h1>
+        <p class="global-line" data-i18n="heroGlobal">NatureLet · Identify the living world around you</p>
+        <p class="lead" data-i18n="heroLead">把镜头对准一朵花、一只鸟、一尾鱼或一只昆虫，几秒认识它的名字、特征、习性与养护提醒。</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="#mini">立即体验</a>
-          <a class="btn-ghost" href="#gallery">看看能识别什么</a>
+          <a class="btn-primary" href="#mini" data-i18n="heroPrimary">立即体验</a>
+          <a class="btn-ghost" href="#gallery" data-i18n="heroGhost">看看能识别什么</a>
         </div>
       </div>
       <div class="phone-demo" aria-label="识别结果预览">
@@ -47,9 +56,9 @@
         <img src="assets/images/flower-rose.jpg" alt="红玫瑰实拍">
         <div class="scan-frame"></div>
         <div class="result-sheet">
-          <span class="result-label">识别结果</span>
-          <strong>月季 Rosa chinensis</strong>
-          <p>置信度 96% · 花期、光照、浇水建议已生成</p>
+          <span class="result-label" data-i18n="resultLabel">识别结果</span>
+          <strong data-i18n="resultName">月季 Rosa chinensis</strong>
+          <p data-i18n="resultDesc">置信度 96% · 花期、光照、浇水建议已生成</p>
         </div>
       </div>
     </div>
@@ -57,10 +66,10 @@
 
   <section class="trust-strip" aria-label="产品能力概览">
     <div class="wrap trust-grid">
-      <div><strong>3000+</strong><span>常见物种知识</span></div>
-      <div><strong>4 类</strong><span>花鸟鱼虫重点覆盖</span></div>
-      <div><strong>秒级</strong><span>拍照识别反馈</span></div>
-      <div><strong>随身</strong><span>自然观察打卡</span></div>
+      <div><strong>3000+</strong><span data-i18n="trustSpecies">常见物种知识</span></div>
+      <div><strong>4 类</strong><span data-i18n="trustCategories">花鸟鱼虫重点覆盖</span></div>
+      <div><strong>秒级</strong><span data-i18n="trustFast">拍照识别反馈</span></div>
+      <div><strong>随身</strong><span data-i18n="trustRecord">自然观察打卡</span></div>
     </div>
   </section>
 
@@ -68,36 +77,36 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Real Nature Gallery</p>
-        <h2 class="sec-title">真实花鸟鱼虫，一眼进入自然现场</h2>
-        <p class="muted-line">用实拍图片呈现核心识别场景，让用户在打开页面的第一刻就知道它能帮自己认识什么。</p>
+        <h2 class="sec-title" data-i18n="galleryTitle">真实花鸟鱼虫，一眼进入自然现场</h2>
+        <p class="muted-line" data-i18n="galleryLead">用实拍图片呈现核心识别场景，让用户在打开页面的第一刻就知道它能帮自己认识什么。</p>
       </div>
       <div class="nature-grid">
         <article class="species-card large">
           <img src="assets/images/flower-rose.jpg" alt="红玫瑰实拍">
           <div class="species-info">
-            <span>花卉识别</span>
-            <h3>看花型、叶片、颜色，快速匹配常见植物</h3>
+            <span data-i18n="galleryFlowerTag">花卉识别</span>
+            <h3 data-i18n="galleryFlowerTitle">看花型、叶片、颜色，快速匹配常见植物</h3>
           </div>
         </article>
         <article class="species-card">
           <img src="assets/images/bird-kingfisher.jpg" alt="普通翠鸟实拍">
           <div class="species-info">
-            <span>鸟类识别</span>
-            <h3>遇见飞羽，认识栖息地与习性</h3>
+            <span data-i18n="galleryBirdTag">鸟类识别</span>
+            <h3 data-i18n="galleryBirdTitle">遇见飞羽，认识栖息地与习性</h3>
           </div>
         </article>
         <article class="species-card">
           <img src="assets/images/fish-clownfish.jpg" alt="小丑鱼实拍">
           <div class="species-info">
-            <span>鱼类识别</span>
-            <h3>水族饲养与生态知识随手查</h3>
+            <span data-i18n="galleryFishTag">鱼类识别</span>
+            <h3 data-i18n="galleryFishTitle">水族饲养与生态知识随手查</h3>
           </div>
         </article>
         <article class="species-card wide">
           <img src="assets/images/insect-butterfly.jpg" alt="帝王蝶停在紫锥菊上的实拍">
           <div class="species-info">
-            <span>昆虫识别</span>
-            <h3>从翅纹、触角到活动季节，补全观察记录</h3>
+            <span data-i18n="galleryInsectTag">昆虫识别</span>
+            <h3 data-i18n="galleryInsectTitle">从翅纹、触角到活动季节，补全观察记录</h3>
           </div>
         </article>
       </div>
@@ -108,29 +117,65 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Why NatureLet</p>
-        <h2 class="sec-title">不是只告诉你名字，也帮你真正看懂</h2>
+        <h2 class="sec-title" data-i18n="featuresTitle">不是只告诉你名字，也帮你真正看懂</h2>
       </div>
       <div class="feature-grid">
         <article class="feature-card">
           <span class="feature-icon">01</span>
-          <h3>拍照识别</h3>
-          <p>上传清晰照片后，展示候选物种、相似度、拉丁名和关键识别点。</p>
+          <h3 data-i18n="feature1Title">拍照识别</h3>
+          <p data-i18n="feature1Text">上传清晰照片后，展示候选物种、相似度、拉丁名和关键识别点。</p>
         </article>
         <article class="feature-card">
           <span class="feature-icon">02</span>
-          <h3>养护与饲养</h3>
-          <p>补充光照、浇水、温度、食性、饲养注意事项，让兴趣自然延伸。</p>
+          <h3 data-i18n="feature2Title">养护与饲养</h3>
+          <p data-i18n="feature2Text">补充光照、浇水、温度、食性、饲养注意事项，让兴趣自然延伸。</p>
         </article>
         <article class="feature-card">
           <span class="feature-icon">03</span>
-          <h3>风险提醒</h3>
-          <p>对有毒、危险、入侵或不建议触碰的物种做醒目提示，降低误判风险。</p>
+          <h3 data-i18n="feature3Title">风险提醒</h3>
+          <p data-i18n="feature3Text">对有毒、危险、入侵或不建议触碰的物种做醒目提示，降低误判风险。</p>
         </article>
         <article class="feature-card">
           <span class="feature-icon">04</span>
-          <h3>打卡记录</h3>
-          <p>记录地点、时间、照片和笔记，积累自己的自然观察地图。</p>
+          <h3 data-i18n="feature4Title">打卡记录</h3>
+          <p data-i18n="feature4Text">记录地点、时间、照片和笔记，积累自己的自然观察地图。</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="scenarios" class="section scenario-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Use Cases</p>
+        <h2 class="sec-title" data-i18n="scenarioTitle">从生活场景进入自然学习</h2>
+        <p class="muted-line" data-i18n="scenarioLead">高级感不只来自视觉，也来自用户一眼能理解的使用场景。</p>
+      </div>
+      <div class="scenario-grid">
+        <article class="scenario-card">
+          <span>01</span>
+          <h3 data-i18n="scenario1Title">公园散步</h3>
+          <p data-i18n="scenario1Text">遇见不认识的花草鸟鸣，随手拍下并收藏观察记录。</p>
+        </article>
+        <article class="scenario-card">
+          <span>02</span>
+          <h3 data-i18n="scenario2Title">亲子自然教育</h3>
+          <p data-i18n="scenario2Text">把一次户外游玩变成可互动、可回顾的自然课堂。</p>
+        </article>
+        <article class="scenario-card">
+          <span>03</span>
+          <h3 data-i18n="scenario3Title">阳台养花</h3>
+          <p data-i18n="scenario3Text">识别植物后查看光照、浇水、修剪和病虫害提醒。</p>
+        </article>
+        <article class="scenario-card">
+          <span>04</span>
+          <h3 data-i18n="scenario4Title">水族饲养</h3>
+          <p data-i18n="scenario4Text">认识观赏鱼与饲养要点，减少新手踩坑。</p>
+        </article>
+      </div>
+      <div class="safety-note">
+        <strong data-i18n="safetyTitle">专业提示</strong>
+        <p data-i18n="safetyText">AI 识别适合辅助学习和观察记录；遇到有毒、危险或保护物种，请以专业资料和当地规定为准。</p>
       </div>
     </div>
   </section>
@@ -139,12 +184,12 @@
     <div class="wrap video-layout">
       <div class="video-copy">
         <p class="eyebrow">People In Nature</p>
-        <h2 class="sec-title align-left">真实人物场景，更像一次随身自然导览</h2>
-        <p>从公园散步、亲子郊游到阳台养花，用户打开相机就能把“好奇一下”变成一次完整记录。</p>
+        <h2 class="sec-title align-left" data-i18n="videoTitle">真实人物场景，更像一次随身自然导览</h2>
+        <p data-i18n="videoLead">从公园散步、亲子郊游到阳台养花，用户打开相机就能把“好奇一下”变成一次完整记录。</p>
         <ul class="scenario-list">
-          <li><span></span>识别眼前物种</li>
-          <li><span></span>生成知识卡片</li>
-          <li><span></span>收藏并打卡</li>
+          <li><span></span><em data-i18n="videoStep1">识别眼前物种</em></li>
+          <li><span></span><em data-i18n="videoStep2">生成知识卡片</em></li>
+          <li><span></span><em data-i18n="videoStep3">收藏并打卡</em></li>
         </ul>
       </div>
       <div class="video-stage">
@@ -152,7 +197,7 @@
           <source src="assets/videos/person-phone-nature.mp4" type="video/mp4">
           您的浏览器暂不支持视频播放。
         </video>
-        <div class="video-caption">人在自然环境中使用手机，契合拍照识别与观察记录的产品场景。</div>
+        <div class="video-caption" data-i18n="videoCaption">人在自然环境中使用手机，契合拍照识别与观察记录的产品场景。</div>
       </div>
     </div>
   </section>
@@ -161,8 +206,8 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Daily Learning</p>
-        <h2 class="sec-title">今日科普</h2>
-        <p class="muted-line">每天认识一种植物或动物，图文知识随手学。</p>
+        <h2 class="sec-title" data-i18n="knowledgeTitle">今日科普</h2>
+        <p class="muted-line" data-i18n="knowledgeLead">每天认识一种植物或动物，图文知识随手学。</p>
       </div>
       <div id="dailyBox" class="daily-box">
         <div class="spinner"></div>
@@ -174,12 +219,12 @@
     <div class="wrap cta-inner">
       <div class="cta-copy">
         <p class="eyebrow">Mini Program</p>
-        <h2>打开自然识别宝，把每次遇见都收进观察册</h2>
-        <p>上线后替换为正式小程序码，即可引导用户从宣传页直接进入拍照识别、收藏和打卡流程。</p>
+        <h2 data-i18n="miniTitle">打开自然识别宝，把每次遇见都收进观察册</h2>
+        <p data-i18n="miniLead">上线后替换为正式小程序码，即可引导用户从宣传页直接进入拍照识别、收藏和打卡流程。</p>
       </div>
       <div class="qr" title="小程序码占位">
         <span class="qr-phone">N</span>
-        <span>小程序码<br>上线后替换</span>
+        <span data-i18n-html="qrText">小程序码<br>上线后替换</span>
       </div>
     </div>
   </section>
@@ -188,16 +233,16 @@
     <div class="wrap about-layout">
       <div>
         <p class="eyebrow">About</p>
-        <h2 class="sec-title align-left">让身边自然变得可亲近</h2>
+        <h2 class="sec-title align-left" data-i18n="aboutTitle">让身边自然变得可亲近</h2>
       </div>
-      <p>「自然识别宝」致力于让每个人都能轻松认识身边的植物与动物。识别与养护知识仅供参考，无法替代专业鉴定；危险、毒性、外来入侵等提示请以专业资料核实。</p>
+      <p data-i18n="aboutText">「自然识别宝」致力于让每个人都能轻松认识身边的植物与动物。识别与养护知识仅供参考，无法替代专业鉴定；危险、毒性、外来入侵等提示请以专业资料核实。</p>
     </div>
   </section>
 </main>
 
 <footer class="footer">
   <div class="wrap">
-    <div>NatureLet 自然识别宝 · 拍一拍，认识身边自然</div>
+    <div data-i18n="footerText">NatureLet 自然识别宝 · 拍一拍，认识身边自然</div>
   </div>
 </footer>
 
