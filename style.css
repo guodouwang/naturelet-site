@@ -139,7 +139,7 @@ a { color: inherit; }
   z-index: -2;
   background:
     linear-gradient(90deg, rgba(9, 22, 17, .86) 0%, rgba(18, 49, 35, .68) 48%, rgba(18, 49, 35, .22) 100%),
-    url("https://images.pexels.com/videos/9640623/pexels-photo-9640623.jpeg?auto=compress&fit=crop&w=1800&h=1100") center / cover;
+    url("assets/images/hero-person-phone.jpg") center / cover;
 }
 
 .hero::after {
@@ -624,7 +624,7 @@ a { color: inherit; }
 .section.cta {
   background:
     linear-gradient(120deg, rgba(36, 95, 66, .96), rgba(75, 131, 166, .86)),
-    url("https://commons.wikimedia.org/wiki/Special:FilePath/Monarch_Butterfly_Danaus_plexippus_on_Echinacea_purpurea_2800px.jpg") center / cover;
+    url("assets/images/insect-butterfly.jpg") center / cover;
   color: #fff;
 }
 
