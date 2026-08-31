@@ -65,15 +65,11 @@ a { color: inherit; }
 }
 
 .logo-mark {
-  display: inline-grid;
   width: 34px;
   height: 34px;
-  place-items: center;
   border-radius: 50%;
-  background: var(--green);
-  color: #fff;
-  font-size: .78rem;
-  letter-spacing: .05em;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(36, 95, 66, .18);
 }
 
 .brand { font-size: 1.08rem; }
